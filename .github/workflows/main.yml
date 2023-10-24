@@ -1,10 +1,11 @@
 name: "Test pipeline"
 on:
-  workflow_run:
-    workflows: ["Codacy Static Code Analysis"]
+  check_run:
+    types:
+      - completed
+  pull_request:
     branches:
-      - "*"
-    types: ["completed"]
+      - main
 jobs:
   verify:
     runs-on: ubuntu-latest

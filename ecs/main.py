@@ -26,7 +26,7 @@ def print_pending(engine: Engine, entity_id: int, todo_component: ToDoComponent)
         print(f'You have to {todo_component.title} today')
 
 def print_welcome(engine: Engine, entity_id: int, _: WelcomeHousekeepingComponent):
-    print('This is what you have planned for today:')
+    print('This is what you have planned for today and tomorrow:')
 
 def mark_for_deletion(engine: Engine, entity_id: int, todo_component: ToDoComponent):
     if todo_component.is_done:

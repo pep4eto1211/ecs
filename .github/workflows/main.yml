@@ -1,7 +1,6 @@
 name: "Test pipeline"
 on:
   check_run:
-    name: "test/name"
     types:
       - completed
 jobs:

@@ -1,6 +1,7 @@
 name: "Test pipeline"
 on:
   check_run:
+    name: "Codacy Static Code Analysis"
     types:
       - completed
 jobs:

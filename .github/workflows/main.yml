@@ -13,5 +13,5 @@ jobs:
           ref: ${{ github.ref }}
           check-name: "Codacy Static Code Analysis"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+          wait-interval: 120
       - run: echo Test

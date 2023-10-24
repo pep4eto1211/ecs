@@ -8,4 +8,7 @@ class Entity:
 
 @property
 def id(self) -> int:
+    """
+    Returns the entity ID
+    """
     return self._id

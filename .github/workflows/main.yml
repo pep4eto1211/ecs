@@ -1,6 +1,7 @@
 name: "Test pipeline"
 on:
   check_run:
+    name: "test/name"
     types:
       - completed
   pull_request:

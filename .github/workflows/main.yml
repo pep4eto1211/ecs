@@ -1,0 +1,12 @@
+name: "Test pipeline"
+on:
+  workflow_run:
+    workflows: ["Codacy Static Code Analysis"]
+    branches:
+      - "*"
+    types: ["completed"]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Test

@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for PR checks
-        uses: lewagon/wait-on-check-action@v1.3.1
+        uses: fountainhead/action-wait-for-check@v1.1.0
         with:
-          ref: ${{ github.ref }}
-          check-name: "Codacy Static Code Analysis"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 120
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          checkName: Codacy Static Code Analysis
+          token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo Test

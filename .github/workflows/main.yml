@@ -4,9 +4,6 @@ on:
     name: "test/name"
     types:
       - completed
-  pull_request:
-    branches:
-      - main
 jobs:
   verify:
     runs-on: ubuntu-latest

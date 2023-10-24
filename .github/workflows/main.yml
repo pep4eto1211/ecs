@@ -1,11 +1,17 @@
 name: "Test pipeline"
 on:
-  check_run:
-    name: "Codacy Static Code Analysis"
-    types:
-      - completed
+  pull_request:
+    branches:
+      - main
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for PR checks
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: ${{ github.ref }}
+          check-name: "Codacy Static Code Analysis"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
       - run: echo Test

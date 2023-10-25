@@ -1,0 +1,10 @@
+name: "Test pipeline 2"
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  verify-duplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Test

@@ -28,6 +28,9 @@ def print_pending(engine: Engine, entity_id: int, todo_component: ToDoComponent)
 def test_method():
     return "test"
 
+def new_test_method():
+    return "new_test"
+
 def print_welcome(engine: Engine, entity_id: int, _: WelcomeHousekeepingComponent):
     print('This is what you have planned for today:')
 

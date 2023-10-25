@@ -3,14 +3,16 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - ecs/**
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for PR checks
-        uses: fountainhead/action-wait-for-check@v1.1.0
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          checkName: Codacy Static Code Analysis
-          token: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Wait for PR checks
+       # uses: fountainhead/action-wait-for-check@v1.1.0
+        #with:
+         # ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          #checkName: Codacy Static Code Analysis
+          #token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo Test

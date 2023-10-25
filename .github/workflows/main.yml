@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - ecs/**
+      - testdata/**
 jobs:
   verify:
     runs-on: ubuntu-latest

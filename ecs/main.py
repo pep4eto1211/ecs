@@ -21,6 +21,9 @@ class FinalHousekeepingComponent:
 
 done_tasks: List[str] = []
 
+def test():
+    pass
+
 def print_pending(engine: Engine, entity_id: int, todo_component: ToDoComponent):
     if not todo_component.is_done:
         print(f'You have to {todo_component.title} today')
